@@ -4,6 +4,7 @@
   "scripts": {
     "postinstall": "lerna bootstrap",
     "clean": "lerna exec \"rimraf bin lib public\"",
+    "prebuild": "npm run clean",
     "build": "lerna exec \"rollup --config=../../rollup.config.js\""
   },
   "devDependencies": {
