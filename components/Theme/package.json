@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "@zenkit/theme",
   "main": "lib/zenkit-theme.js",
   "module": "lib/zenkit-theme.esm.js",

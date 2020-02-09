@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "@zenkit/link",
   "main": "lib/zenkit-link.js",
   "module": "lib/zenkit-link.esm.js",

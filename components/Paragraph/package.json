@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "@zenkit/paragraph",
   "main": "lib/zenkit-paragraph.js",
   "module": "lib/zenkit-paragraph.esm.js",

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "@zenkit/text",
   "main": "lib/zenkit-text.js",
   "module": "lib/zenkit-text.esm.js",

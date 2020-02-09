@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "@zenkit/container",
   "main": "lib/zenkit-container.js",
   "module": "lib/zenkit-container.esm.js",
