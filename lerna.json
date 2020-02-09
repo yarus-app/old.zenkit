@@ -1,0 +1,24 @@
+{
+  "version": "independent",
+  "packages": [
+    "components/*",
+    "packages/*"
+  ],
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    },
+    "run": {
+      "stream": true,
+      "parallel": true
+    },
+    "exec": {
+      "stream": true,
+      "parallel": true
+    },
+    "version": {
+      "allowBranch": "master",
+      "message": "chore(release): publish %s"
+    }
+  }
+}
