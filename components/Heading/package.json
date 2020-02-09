@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@zenkit/heading",
   "main": "lib/zenkit-heading.js",
   "module": "lib/zenkit-heading.esm.js",

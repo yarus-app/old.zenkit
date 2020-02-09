@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@zenkit/blockquote",
   "main": "lib/zenkit-blockquote.js",
   "module": "lib/zenkit-blockquote.esm.js",

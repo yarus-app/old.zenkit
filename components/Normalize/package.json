@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@zenkit/normalize",
   "main": "lib/zenkit-normalize.js",
   "module": "lib/zenkit-normalize.esm.js",

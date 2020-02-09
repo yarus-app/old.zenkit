@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@zenkit/table",
   "main": "lib/zenkit-table.js",
   "module": "lib/zenkit-table.esm.js",
