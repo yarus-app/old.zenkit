@@ -17,8 +17,7 @@
       "parallel": true
     },
     "version": {
-      "allowBranch": "master",
-      "message": "chore(release): publish %s"
+      "allowBranch": "master"
     }
   }
 }
