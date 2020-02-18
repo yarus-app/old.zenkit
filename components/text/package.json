@@ -1,8 +1,8 @@
 {
   "version": "1.0.2",
-  "name": "@zenkit/helpers",
-  "main": "lib/zenkit-helpers.js",
-  "module": "lib/zenkit-helpers.esm.js",
+  "name": "@zenkit/text",
+  "main": "lib/zenkit-text.js",
+  "module": "lib/zenkit-text.esm.js",
   "modules.root": "lib",
   "peerDependencies": {
     "@babel/runtime-corejs3": "^7.8.4",
@@ -13,5 +13,8 @@
   },
   "files": [
     "lib"
-  ]
+  ],
+  "dependencies": {
+    "styled-system": "^5.1.4"
+  }
 }

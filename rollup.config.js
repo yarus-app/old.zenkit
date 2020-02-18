@@ -12,8 +12,8 @@ import copyAssets from 'rollup-plugin-copy-imported-assets';
 const extensions = ['.js', '.jsx', '.mjs'];
 
 export default async commandLineArgs => {
-  // const isDev = commandLineArgs.watch;
-   const isDev = true;
+  const isDev = commandLineArgs.watch;
+   // const isDev = true;
 
   const ROOT_PATH = process.cwd();
 
@@ -35,6 +35,7 @@ export default async commandLineArgs => {
     main: path.join(LIB_PATH, title + '.js'),
     module: path.join(LIB_PATH, title + '.esm.js'),
     'modules.root': LIB_PATH,
+    files: ['lib'],
     browser: undefined,
     unpkg: undefined,
     default: undefined
@@ -45,29 +46,26 @@ export default async commandLineArgs => {
   }
 
   const config = {
-    preserveModules: true,
-    preserveSymlinks: true,
-    shimMissingExports: true,
     input: {
       [title]: 'src/index.js',
     },
     output: [{
       name,
-      dir: '.',
-      format: 'esm',
-      entryFileNames: 'lib/[name].[format].js',
-      chunkFileNames: 'lib/[name].[hash].[format].js',
-      assetFileNames: 'public/[name].[hash][extname]',
+      dir: LIB_PATH,
+      format: 'cjs',
+      entryFileNames: '[name].js',
+      chunkFileNames: '[name].[hash].js',
+      assetFileNames: './../' + PUBLIC_PATH + '/' + '[name].[hash][extname]',
       compact: !isDev,
       esModule: true,
       exports: 'named'
     }, {
       name,
-      dir: '.',
-      format: 'cjs',
-      entryFileNames: 'lib/[name].js',
-      chunkFileNames: 'lib/[name].[hash].js',
-      assetFileNames: 'public/[name].[hash][extname]',
+      dir: LIB_PATH,
+      format: 'esm',
+      entryFileNames: '[name].[format].js',
+      chunkFileNames: '[name].[hash].[format].js',
+      assetFileNames: './../' + PUBLIC_PATH + '/' + '[name].[hash][extname]',
       compact: !isDev,
       esModule: true,
       exports: 'named'
@@ -86,7 +84,7 @@ export default async commandLineArgs => {
       }),
       commonjs({ include: /node_modules/ }),
       json(),
-      copyAssets({ include: /\.(svg|png|jpe?g|webp)/, }),
+      copyAssets({ include: /\.(svg|png|jpe?g|webp)/, keepEmptyImports: true }),
       babel({
         runtimeHelpers: true,
         presets: [
@@ -105,8 +103,8 @@ export default async commandLineArgs => {
         ],
         plugins: [
            ['@babel/plugin-transform-runtime', {
-              absoluteRuntime: false,
               corejs: 3,
+              absoluteRuntime: false,
               regenerator: false
            }],
 
@@ -149,7 +147,10 @@ export default async commandLineArgs => {
         sourceMaps: true
       }),
      !isDev && terser()
-    ]
+    ],
+    preserveModules: true,
+    preserveSymlinks: true,
+    shimMissingExports: true
   }
 
   return config;

@@ -1,8 +1,8 @@
 {
   "version": "1.0.2",
-  "name": "@zenkit/helpers",
-  "main": "lib/zenkit-helpers.js",
-  "module": "lib/zenkit-helpers.esm.js",
+  "name": "@zenkit/grid",
+  "main": "lib/zenkit-grid.js",
+  "module": "lib/zenkit-grid.esm.js",
   "modules.root": "lib",
   "peerDependencies": {
     "@babel/runtime-corejs3": "^7.8.4",

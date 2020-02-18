@@ -1,12 +1,16 @@
 {
   "version": "independent",
   "packages": [
+    "example",
     "components/*",
     "packages/*"
   ],
   "command": {
     "bootstrap": {
-      "hoist": true
+      "hoist": true,
+      "nohoist": [
+        "example"
+      ]
     },
     "run": {
       "stream": true,

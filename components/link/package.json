@@ -1,8 +1,8 @@
 {
   "version": "1.0.2",
-  "name": "@zenkit/helpers",
-  "main": "lib/zenkit-helpers.js",
-  "module": "lib/zenkit-helpers.esm.js",
+  "name": "@zenkit/link",
+  "main": "lib/zenkit-link.js",
+  "module": "lib/zenkit-link.esm.js",
   "modules.root": "lib",
   "peerDependencies": {
     "@babel/runtime-corejs3": "^7.8.4",

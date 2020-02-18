@@ -1,17 +1,20 @@
 {
+  "name": "@zenkit/box",
   "version": "1.0.2",
-  "name": "@zenkit/helpers",
-  "main": "lib/zenkit-helpers.js",
-  "module": "lib/zenkit-helpers.esm.js",
+  "main": "lib/zenkit-box.js",
+  "module": "lib/zenkit-box.esm.js",
   "modules.root": "lib",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "styled-system": "^5.1.4"
+  },
   "peerDependencies": {
     "@babel/runtime-corejs3": "^7.8.4",
     "core-js": "^3.6.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "styled-components": "^5.0.1"
-  },
-  "files": [
-    "lib"
-  ]
+  }
 }
